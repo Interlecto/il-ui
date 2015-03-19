@@ -1,0 +1,142 @@
+/******
+ ******  -- RESETS
+ ******/
+*,.x{margin:0;padding:0;border: none}
+:link{text-decoration:none;color:inherit;background-color:rgba(0,0,100,0.1)}
+:link:hover{background-color:rgba(0,0,100,0.2)}
+:visited{text-decoration:none;color:inherit;background-color:rgba(50,0,100,0.1)}
+:visited:hover{background-color:rgba(50,0,100,0.2)}
+
+/******
+ ******  -- INTERLECTO VAINILLA TEMPLATE
+ ******/
+@font-face{font-family:Interlecto;src:url('../woff/interlecto.woff')}
+@font-face{font-family:Interlecto;src:url('../woff/interlectoI.woff');font-style:italic}
+@font-face{font-family:Interlecto;src:url('../woff/interlectoB.woff');font-weight:bold}
+@font-face{font-family:Interlecto;src:url('../woff/interlectoBI.woff');font-weight:bold;font-style:italic}
+@font-face{font-family:'Interlecto Logo';src:url('../woff/ilectologo.woff')}
+@font-face{font-family:'Interlecto Dings';src:url('../woff/ilectodings.woff')}
+@font-face{font-family:'Interlecto Mono';src:url('../woff/ilectomono.woff')}
+@font-face{font-family:'Interlecto Mono';src:url('../woff/ilectomonoI.woff');font-style:italic}
+@font-face{font-family:'Interlecto Mono';src:url('../woff/ilectomonoB.woff');font-weight:bold}
+@font-face{font-family:'Interlecto Mono';src:url('../woff/ilectomonoBI.woff');font-weight:bold;font-style:italic}
+body,.n{font-family:Interlecto,Helv,Arial,sans;font-size:12pt;line-height:1.5em}
+.t,pre,code,tt{font-family:'Interlecto Mono','Andale Mono','Lucidad Console',monospace}
+.i,i,em,dfn,cite,address,tfoot{font-style:italic}
+.b,b,strong,dfn,dt,th{font-weight:bold}
+.h,h1,h2,h3,h4,h5,h6{font-family:'Interlecto Logo',Helv,Arial,sans;font-weight:normal}
+.h,h1,h2,h3,h4,h5,h6{margin:0.5em 0 0}
+.p,p,code,pre,kbd,address,ul,ol,dl,fieldset{margin:0.625em 0 0}
+h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child,p:first-child{margin-top:0}
+.bq,blockquote{margin:0.5em 1em}
+.li,li,dd{margin-left:1.5em}
+ul{list-style:disc}
+ol{list-style:decimal}
+ol ol{list-style:upper-alpha}
+ol ol ol{list-style:lower-roman}
+ol ol ol ol{list-style:lower-alpha}
+table{margin:1em 0}
+th,td,caption{padding:4px}
+abbr,acronym{border-bottom:thin dotted}
+.s,del{text-decoration:line-through}
+pre{white-space:pre}
+img{max-width:100%}
+h1{font-size:2.25em}
+h2{font-size:1.6em}
+h3{font-size:1.35em}
+h4{font-size:1.125em}
+h5{font-size:1em}
+h6{font-size:0.83334em}
+fieldset{border:1px inset #555;padding:0.5em}
+input,select{border:1px solid #555;padding:2px 3px}
+input[type=reset],input[type=submit],input[type=button]{padding:2px 5px;border-radius:4px;border-style:outset}
+.button,.reset,.submit{border:1px solid #555;padding:2px 5px;border-radius:4px}
+input[type=file]{padding:0}
+.o{display:none}
+.sc{font-variant:small-caps}
+.uc{text-transform:uppercase}
+.lc{text-transform:lowercase}
+.tc{text-transform:capitalize}
+.f{text-indent:1.2em;margin-top:0}
+.x,.cl{clear:both}
+.x:after,.ca:after{display:block;content:"\00a0";height:0;clear:both}
+.l{display:block;float:left}
+.r{display:block;float:right}
+.c,.ac{display:block;margin-left:auto;margin-right:auto}
+.al{display:inline;float:left;margin-right:10px}
+.ar{display:inline;float:right;margin-left:10px}
+.ar{display:inline;float:right;margin-left:10px}
+.j{display:block;margin-left:0;margin-right:0}
+.lf{text-align:left}
+.rf{text-align:right}
+.cf{text-align:center}
+.jf{text-align:justify}
+.w{font-family:'Interlecto Dings'}
+.huge{font-size:3em}
+.extrabig{font-size:2em}
+.big{font-size:1.6em}
+.large{font-size:1.2em}
+.n,.normal{font-size:1em}
+.small{font-size:0.835em}
+.tiny{font-size:0.6}
+.fri{margin:0}
+.fri dt{float:left;clear:left;margin:0 1ex 0 0}
+.fri dd{margin:0.5ex 0}
+.fri dd:after{display:block;content:"\00a0";height:0;clear:left}
+
+
+/******
+ ******  -- COMMON STYLE
+ ******/
+input,select{background:#ccc;color:black}
+.button,input[type=button]{background:#aaa;font-family:inherit}
+.submit,input[type=submit]{background:#5af;font-family:inherit}
+.reset,input[type=reset]{background:#f55;font-family:inherit}
+.hnav ul{display:inline-block;list-style-type:none}
+.hnav li{display:block;float:left;margin:0;padding:0}
+.hnav a{padding:2px 0.5ex}
+
+/******
+ ******  -- UI BUTTONS
+ ******/
+.ui:before{display:inline-block;font-family:'Interlecto Dings';font-style:normal;font-weight:normal}
+.ui_rss:before{content:'\f8c0'}
+.ui_blogger:before{content:'\f8c3'}
+.ui_facebook:before{content:'\f8c8'}
+.ui_flickr:before{content:'\f8c9'}
+.ui_google:before{content:'\f8ca'}
+.ui_gplus:before{content:'\f8cb'}
+.ui_instagram:before{content:'\f8cc'}
+.ui_linkedin:before{content:'\f8ce'}
+.ui_quora:before{content:'\f8d1'}
+.ui_twitter:before{content:'\f8d7'}
+.ui_yahoo:before{content:'\f8dc'}
+.ui_youtube:before{content:'\f8dd'}
+.ui_github:before{content:'\f8de'}
+.ui_patreon:before{content:'\f8df'}
+.ui_copyleft:before{content:'\f8e0'}
+.ui_cc:before{content:'\f8e1'}
+.ui_cc-by:before{content:'\f8e2'}
+.ui_cc-nc:before{content:'\f8e3'}
+.ui_cc-sa:before{content:'\f8e4'}
+.ui_cc-nd:before{content:'\f8e5'}
+.ui_cc-pd:before{content:'\f8e6'}
+.ui_cc-0:before{content:'\f8e7'}
+.ui_cc-nc-eu:before{content:'\f8e8'}
+.ui_cc-nc-jp:before{content:'\f8e9'}
+.ui_cc-share:before{content:'\f8ea'}
+.ui_cc-remix:before{content:'\f8eb'}
+.ui_cc-sample:before{content:'\f8ec'}
+.ui_cc-splus:before{content:'\f8ed'}
+.ui_kopimi:before{content:'\f8ee'}
+.ui_opensource:before{content:'\f8ef'}
+.ui_js:before{content:'\f8f4'}
+.ui_html5:before{content:'\f8f5'}
+.ui_css3:before{content:'\f8f6'}
+.ui_ht:before{content:'\f8f8'}
+.ui_bog:before{content:'\f8f9'}
+.ui_th:before{content:'\f8fb'}
+.ui_pp:before{content:'\f8fc'}
+.ui_rata:before{content:'\f8fd'}
+.ui_guy:before{content:'\f8fe'}
+.ui_il:before{content:'\f8ff'}
