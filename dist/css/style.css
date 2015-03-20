@@ -40,7 +40,8 @@ th,td,caption{padding:4px}
 abbr,acronym{border-bottom:thin dotted}
 .s,del{text-decoration:line-through}
 pre{white-space:pre}
-img{max-width:100%}
+pre,img{max-width:100%}
+pre{overflow:scroll;max-height:600px}
 h1{font-size:2.25em}
 h2{font-size:1.6em}
 h3{font-size:1.35em}
@@ -99,6 +100,7 @@ input,select{background:#ccc;color:black}
 /******
  ******  -- UI BUTTONS
  ******/
+ i.ui{display:inline-blokc;width:0;overflow:hidden}
 .ui:before{display:inline-block;font-family:'Interlecto Dings';font-style:normal;font-weight:normal}
 .ui_rss:before{content:'\f8c0'}
 .ui_blogger:before{content:'\f8c3'}
@@ -140,3 +142,7 @@ input,select{background:#ccc;color:black}
 .ui_rata:before{content:'\f8fd'}
 .ui_guy:before{content:'\f8fe'}
 .ui_il:before{content:'\f8ff'}
+.ui_magnifyl:before{content:'\1f50d'}
+.ui_magnifyr:before{content:'\1f50e'}
+input.ui{font-family:'Interlecto Dings'}
+/*strong:after{content:'\1f50e';font-family:'Interlecto Dings'}*/
