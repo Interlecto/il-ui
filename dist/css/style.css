@@ -15,7 +15,7 @@
 @font-face{font-family:Interlecto;src:url('../woff/interlectoB.woff');font-weight:bold}
 @font-face{font-family:Interlecto;src:url('../woff/interlectoBI.woff');font-weight:bold;font-style:italic}
 @font-face{font-family:'Interlecto Logo';src:url('../woff/ilectologo.woff')}
-@font-face{font-family:'Interlecto Dings';src:url('../woff/ilectodings.woff')}
+@font-face{font-family:'Interlecto Dings';src:url('../woff/ilectodings.woff#v0.1.09')}
 @font-face{font-family:'Interlecto Mono';src:url('../woff/ilectomono.woff')}
 @font-face{font-family:'Interlecto Mono';src:url('../woff/ilectomonoI.woff');font-style:italic}
 @font-face{font-family:'Interlecto Mono';src:url('../woff/ilectomonoB.woff');font-weight:bold}
@@ -61,11 +61,10 @@ input[type=file]{padding:0}
 .f{text-indent:1.2em;margin-top:0}
 .x,.cl{clear:both}
 .x:after,.ca:after{display:block;content:"\00a0";height:0;clear:both}
-.l{display:block;float:left}
-.r{display:block;float:right}
+.l{display:block;float:left;clear:left;max-width:50%}
+.r{display:block;float:right;clear:right;max-width:50%}
 .c,.ac{display:block;margin-left:auto;margin-right:auto}
 .al{display:inline;float:left;margin-right:10px}
-.ar{display:inline;float:right;margin-left:10px}
 .ar{display:inline;float:right;margin-left:10px}
 .j{display:block;margin-left:0;margin-right:0}
 .lf{text-align:left}
@@ -84,6 +83,8 @@ input[type=file]{padding:0}
 .fri dt{float:left;clear:left;margin:0 1ex 0 0}
 .fri dd{margin:0.5ex 0}
 .fri dd:after{display:block;content:"\00a0";height:0;clear:left}
+.caption{text-align:center;display:block;margin:5px;padding:5px;border:thin solid #aaa}
+.caption img{display:block;margin:0 auto 5px}
 
 
 /******
@@ -101,7 +102,9 @@ input,select{background:#ccc;color:black}
  ******  -- UI BUTTONS
  ******/
  i.ui{display:inline-blokc;width:0;overflow:hidden}
+ li.ui{list-style:none;position:relative}
 .ui:before{display:inline-block;font-family:'Interlecto Dings';font-style:normal;font-weight:normal}
+li.ui:before{display:block;position:absolute;left:-2em;width:1.75em;text-align:right}
 .ui_rss:before{content:'\f8c0'}
 .ui_blogger:before{content:'\f8c3'}
 .ui_facebook:before{content:'\f8c8'}
