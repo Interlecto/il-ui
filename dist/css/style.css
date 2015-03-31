@@ -24,7 +24,7 @@ body,.n{font-family:Interlecto,Helv,Arial,sans;font-size:12pt;line-height:1.5em}
 .t,pre,code,tt{font-family:'Interlecto Mono','Andale Mono','Lucidad Console',monospace}
 .i,i,em,dfn,cite,address,tfoot{font-style:italic}
 .b,b,strong,dfn,dt,th{font-weight:bold}
-.h,h1,h2,h3,h4,h5,h6{font-family:'Interlecto Logo',Helv,Arial,sans;font-weight:normal}
+.h,h1,h2,h3,h4,h5,h6{font-family:'Interlecto Logo',Helv,Arial,sans;font-weight:bold}
 .h,h1,h2,h3,h4,h5,h6{margin:0.5em 0 0}
 .p,p,code,pre,kbd,address,ul,ol,dl,fieldset{margin:0.625em 0 0}
 h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child,p:first-child{margin-top:0}
@@ -42,12 +42,12 @@ abbr,acronym{border-bottom:thin dotted}
 pre{white-space:pre}
 pre,img{max-width:100%}
 pre{overflow:scroll;max-height:600px}
-h1{font-size:2.25em}
-h2{font-size:1.6em}
-h3{font-size:1.35em}
-h4{font-size:1.125em}
-h5{font-size:1em}
-h6{font-size:0.83334em}
+h1{font-size:2.25em;line-height:1.5em}
+h2{font-size:1.6em;line-height:1.5em}
+h3{font-size:1.35em;line-height:1.5em}
+h4{font-size:1.125em;line-height:1.5em}
+h5{font-size:1em;line-height:1.5em}
+h6{font-size:0.83334em;line-height:1.5em}
 fieldset{border:1px inset #555;padding:0.5em}
 input,select{border:1px solid #555;padding:2px 3px}
 input[type=reset],input[type=submit],input[type=button]{padding:2px 5px;border-radius:4px;border-style:outset}
@@ -85,7 +85,19 @@ input[type=file]{padding:0}
 .fri dd:after{display:block;content:"\00a0";height:0;clear:left}
 .caption{text-align:center;display:block;margin:5px;padding:5px;border:thin solid #aaa}
 .caption img{display:block;margin:0 auto 5px}
-
+.ul{text-decoration:underline}
+em.ul{font-style:normal}
+label.wd{display:inline-block}
+.20{width:20%}
+.25{width:25%}
+.33{width:33%}
+.40{width:40%}
+.50{width:50%}
+.60{width:60%}
+.67{width:67%}
+.75{width:75%}
+.80{width:80%}
+fieldset fieldset{display:inline-block;border:none;padding:none}
 
 /******
  ******  -- COMMON STYLE
@@ -98,54 +110,87 @@ input,select{background:#ccc;color:black}
 .hnav li{display:block;float:left;margin:0;padding:0}
 .hnav a{padding:2px 0.5ex}
 
+table.fancy{margin:0.5ex auto;border:outset 3px #555;border-collapse:collapse}
+.fancy th{background-color:black;color:white}
+.fancy th,
+.fancy td{border:1px solid #aaa;padding:1px 2px;line-height:1.25em}
+.fancy thead th,
+.fancy thead td{border:2px inset #55a}
+.fancy thead th{background:#005}
+.fancy thead td{background:#aaf;text-align:center;font-weight:bold}
+td.grayed{background:#ccc}
+
+p.li,p.ui{position:relative;margin:0.5ex 0 0 1.5em}
+p.li:before,
+p.ui:before{display:block;position:absolute;left:-1.5em;width:1.5em;text-align:center}
+p.bullet:before{content:'\2022'}
+p.disc:before{content:'\25cf'}
+p.circle:before{content:'\25cb'}
+li.bullet{list-style-type:none;position:relative}
+li.bullet:before{display:block;position:absolute;left:-1.5em;width:1.5em;text-align:center;content:'\2022'}
+li.circle{list-style-type:circle}
+li.disc{list-style-type:disc}
+li.alpha{list-style-type:upper-latin}
+
+.twocol,.twocola,.twocolb{width:50%;box-sizing:border-box;float:left}
+.twocola{padding-left:0;padding-right:2.5px;clear:left}
+.twocolb{padding-left:2.5px;padding-right:0;clear:right;float:right}
+
 /******
  ******  -- UI BUTTONS
  ******/
- i.ui{display:inline-blokc;width:0;overflow:hidden}
- li.ui{list-style:none;position:relative}
-.ui:before{display:inline-block;font-family:'Interlecto Dings';font-style:normal;font-weight:normal}
+i.ui{font-style:inherit}
+li.ui{list-style:none;position:relative}
+ul.ui{list-style:none}
+ui.ui>li{position:relative}
+.ui:before,ul.ui>li:before{display:inline-block;font-family:'Interlecto Dings';font-style:normal;font-weight:normal}
+ul.ui:before{display:none}
 li.ui:before{display:block;position:absolute;left:-2em;width:1.75em;text-align:right}
-.ui_rss:before{content:'\f8c0'}
-.ui_blogger:before{content:'\f8c3'}
-.ui_facebook:before{content:'\f8c8'}
-.ui_flickr:before{content:'\f8c9'}
-.ui_google:before{content:'\f8ca'}
-.ui_gplus:before{content:'\f8cb'}
-.ui_instagram:before{content:'\f8cc'}
-.ui_linkedin:before{content:'\f8ce'}
-.ui_quora:before{content:'\f8d1'}
-.ui_twitter:before{content:'\f8d7'}
-.ui_yahoo:before{content:'\f8dc'}
-.ui_youtube:before{content:'\f8dd'}
-.ui_github:before{content:'\f8de'}
-.ui_patreon:before{content:'\f8df'}
-.ui_copyleft:before{content:'\f8e0'}
-.ui_cc:before{content:'\f8e1'}
-.ui_cc-by:before{content:'\f8e2'}
-.ui_cc-nc:before{content:'\f8e3'}
-.ui_cc-sa:before{content:'\f8e4'}
-.ui_cc-nd:before{content:'\f8e5'}
-.ui_cc-pd:before{content:'\f8e6'}
-.ui_cc-0:before{content:'\f8e7'}
-.ui_cc-nc-eu:before{content:'\f8e8'}
-.ui_cc-nc-jp:before{content:'\f8e9'}
-.ui_cc-share:before{content:'\f8ea'}
-.ui_cc-remix:before{content:'\f8eb'}
-.ui_cc-sample:before{content:'\f8ec'}
-.ui_cc-splus:before{content:'\f8ed'}
-.ui_kopimi:before{content:'\f8ee'}
-.ui_opensource:before{content:'\f8ef'}
-.ui_js:before{content:'\f8f4'}
-.ui_html5:before{content:'\f8f5'}
-.ui_css3:before{content:'\f8f6'}
-.ui_ht:before{content:'\f8f8'}
-.ui_bog:before{content:'\f8f9'}
-.ui_th:before{content:'\f8fb'}
-.ui_pp:before{content:'\f8fc'}
-.ui_rata:before{content:'\f8fd'}
-.ui_guy:before{content:'\f8fe'}
-.ui_il:before{content:'\f8ff'}
-.ui_magnifyl:before{content:'\1f50d'}
-.ui_magnifyr:before{content:'\1f50e'}
+ul.ui>li:before{display:block;position:absolute;left:-0.75em;width:1.75em;text-align:right}
+.ui_rss:before,ul.ui_rss>li:before{content:'\f8c0'}
+.ui_blogger:before,ul.ui_blogger>li:before{content:'\f8c3'}
+.ui_facebook:before,ul.ui_facebook>li:before{content:'\f8c8'}
+.ui_flickr:before,ul.ui_flickr>li:before{content:'\f8c9'}
+.ui_google:before,ul.ui_google>li:before{content:'\f8ca'}
+.ui_gplus:before,ul.ui_gplus>li:before{content:'\f8cb'}
+.ui_instagram:before,ul.ui_instagram>li:before{content:'\f8cc'}
+.ui_linkedin:before,ul.ui_linkedin>li:before{content:'\f8ce'}
+.ui_quora:before,ul.ui_quora>li:before{content:'\f8d1'}
+.ui_twitter:before,ul.ui_twitter>li:before{content:'\f8d7'}
+.ui_yahoo:before,ul.ui_yahoo>li:before{content:'\f8dc'}
+.ui_youtube:before,ul.ui_youtube>li:before{content:'\f8dd'}
+.ui_github:before,ul.ui_github>li:before{content:'\f8de'}
+.ui_patreon:before,ul.ui_patreon>li:before{content:'\f8df'}
+.ui_copyleft:before,ul.ui_copyleft>li:before{content:'\f8e0'}
+.ui_cc:before,ul.ui_cc>li:before{content:'\f8e1'}
+.ui_cc-by:before,ul.ui_cc-by>li:before{content:'\f8e2'}
+.ui_cc-nc:before,ul.ui_cc-nc>li:before{content:'\f8e3'}
+.ui_cc-sa:before,ul.ui_cc-sa>li:before{content:'\f8e4'}
+.ui_cc-nd:before,ul.ui_cc-nd>li:before{content:'\f8e5'}
+.ui_cc-pd:before,ul.ui_cc-pd>li:before{content:'\f8e6'}
+.ui_cc-0:before,ul.ui_cc-0>li:before{content:'\f8e7'}
+.ui_cc-nc-eu:before,ul.ui_cc-nc-eu>li:before{content:'\f8e8'}
+.ui_cc-nc-jp:before,ul.ui_cc-nc-jp>li:before{content:'\f8e9'}
+.ui_cc-share:before,ul.ui_cc-share>li:before{content:'\f8ea'}
+.ui_cc-remix:before,ul.ui_cc-remix>li:before{content:'\f8eb'}
+.ui_cc-sample:before,ul.ui_cc-sample>li:before{content:'\f8ec'}
+.ui_cc-splus:before,ul.ui_cc-splus>li:before{content:'\f8ed'}
+.ui_kopimi:before,ul.ui_kopimi>li:before{content:'\f8ee'}
+.ui_opensource:before,ul.ui_opensource>li:before{content:'\f8ef'}
+.ui_js:before,ul.ui_js>li:before{content:'\f8f4'}
+.ui_html5:before,ul.ui_html5>li:before{content:'\f8f5'}
+.ui_css3:before,ul.ui_css3>li:before{content:'\f8f6'}
+.ui_ht:before,ul.ui_ht>li:before{content:'\f8f8'}
+.ui_bog:before,ul.ui_bog>li:before{content:'\f8f9'}
+.ui_th:before,ul.ui_th>li:before{content:'\f8fb'}
+.ui_pp:before,ul.ui_pp>li:before{content:'\f8fc'}
+.ui_rata:before,ul.ui_rata>li:before{content:'\f8fd'}
+.ui_guy:before,ul.ui_guy>li:before{content:'\f8fe'}
+.ui_il:before,ul.ui_il>li:before{content:'\f8ff'}
+.ui_magnifyl:before,ul.ui_magnifyl>li:before{content:'\1f50d'}
+.ui_magnifyr:before,ul.ui_magnifyr>li:before{content:'\1f50e'}
 input.ui{font-family:'Interlecto Dings'}
 /*strong:after{content:'\1f50e';font-family:'Interlecto Dings'}*/
+
+/*section{border:1px solid red}*/
+/*h1{border:1px solid blue}*/
