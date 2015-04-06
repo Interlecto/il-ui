@@ -97,18 +97,25 @@ label.wd{display:inline-block}
 .67{width:67%}
 .75{width:75%}
 .80{width:80%}
-fieldset fieldset{display:inline-block;border:none;padding:none}
 
 /******
  ******  -- COMMON STYLE
  ******/
-input,select{background:#ccc;color:black}
+fieldset fieldset{display:inline-block;border:none;padding:none}
+input,select,textarea{background:#ddd;color:black;border:inset #555 1px}
+textarea{box-sizing:border-box;width:100%;max-width:100%;height:auto}
 .button,input[type=button]{background:#aaa;font-family:inherit}
 .submit,input[type=submit]{background:#5af;font-family:inherit}
 .reset,input[type=reset]{background:#f55;font-family:inherit}
+.f_horizontal{padding-left:160px;position:relative}
+.f_horizontal>label{display:block;position:absolute;width:160px;left:0}
+.f_radios{display:inline-block}
+.f_radios label{margin:0 1ex 0 .5ex}
+
 .hnav ul{display:inline-block;list-style-type:none}
 .hnav li{display:block;float:left;margin:0;padding:0}
 .hnav a{padding:2px 0.5ex}
+
 
 table.fancy{margin:0.5ex auto;border:outset 3px #555;border-collapse:collapse}
 .fancy th{background-color:black;color:white}
